@@ -9,12 +9,12 @@ int m = Convert.ToInt32(Console.ReadLine());
 Console.Write("Задайте число N ");
 int n = Convert.ToInt32(Console.ReadLine());
 
-int NaturalNumber(int from, int to)
+int SumNaturalNumber(int from, int to)
 {
    if (from > to) return 0;
-   return from + NaturalNumber(from + 1, to);
+   return from + SumNaturalNumber(from + 1, to);
 }
 
-int result = NaturalNumber(m, n);
+int result = SumNaturalNumber(m, n);
 Console.Write($"M = {m}; N = {n} -> ");
 Console.WriteLine(result);
